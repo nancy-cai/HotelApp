@@ -51,11 +51,11 @@ public class SharedUIMapTest extends HotelAppBizFunctions{
 		assertEquals(actual, expected);
 	}
 	
-	public void selectCity(){
+	public void selectCity(int index){
 		
 		String strfilepath = "./Datapool/Location.xls";
 	
-		String strlocation = HA_GF_readXL(2,"location",strfilepath );
+		String strlocation = HA_GF_readXL(index,"location",strfilepath );
 		location = new Select(driver.findElement(By.name("location")));
 		location.selectByVisibleText(strlocation);
 	    
@@ -88,10 +88,10 @@ public class SharedUIMapTest extends HotelAppBizFunctions{
 
 	}
 	
-	/*@After
+	@After
 	public void closeDriver(){
 		driver.close();
 	}
-	*/
+	
 
 }

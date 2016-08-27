@@ -42,26 +42,23 @@ public class SelectHotel {
 	*/
 	
 	public void findHotelByName(String hotelName){
-		String Hpath = "//*[@id='select_form']/table/tbody/tr[2]/td/table/tbody/tr[3]/td[1]/input";
-		String parentRow = Hpath +"../..";
-		driver.findElement(By.xpath(parentRow));
-		driver.findElement(By.xpath("/td[1]/input")).click();
 
 		
 
-		/*for(int i=2; i<6; i++){
+		for(int i=2; i<6; i++){
 			
 			//String hotelXpath = String.format("//*[@id='select_form']/table/tbody/tr[2]/td/table/tbody/tr[%s]", i);
 			String hotelXpath = "//*[@id='select_form']/table/tbody/tr[2]/td/table/tbody/tr[" + i + "]";
-			String parentRow = hotelXpath +"../..";
-			
-			if(driver.findElement(By.xpath(hotelXpath +"/td[2]/input")).getAttribute("value") == hotelName) {
+			//String parentRow = hotelXpath +"/../..";
+			String name = driver.findElement(By.xpath(hotelXpath +"/td[2]/input")).getAttribute("value");
 				
-				WebElement parent=driver.findElement(By.xpath(parentRow));
-				parent.findElement(By.xpath("/td[1]/input")).click();
+		
+			if(name.equalsIgnoreCase(hotelName)) {
+				System.out.println("haha");
+				driver.findElement(By.xpath(hotelXpath+"/td[1]/input")).click();
 				break;
 			}
-        }	*/
+        }	
 		
 	}
 	
@@ -79,7 +76,7 @@ public class SelectHotel {
 		selectLocation(driver);
 		
 		//selectHotelByName("Hotel Creek");
-		findHotelByName("Hotel Creek");
+		findHotelByName("Hotel Cornice");
 	}
 	
 	/*@After

@@ -31,12 +31,13 @@ public class SelectLocation extends SharedUIMapTest{
 		
 		int count= HA_GF_XLRowCount("./Datapool/Location.xls","location");
 		for(int i =1; i < count; i++){
-		driver.get("http://www.adactin.com/HotelApp/");
-		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		enterUsername("doggiecai");
-		enterPassword( "sj191013");
-		clickLogin();
-		selectCity();
+			driver.get("http://www.adactin.com/HotelApp/");
+			//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			enterUsername("doggiecai");
+			enterPassword( "sj191013");
+			clickLogin();
+			selectCity(i);
+			
 		}
 	
 		
