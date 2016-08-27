@@ -33,8 +33,8 @@ public class SelectLocation extends SharedUIMapTest{
 		for(int i =1; i < count; i++){
 			driver.get("http://www.adactin.com/HotelApp/");
 			//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			enterUsername("doggiecai");
-			enterPassword( "sj191013");
+			enterUsername("");
+			enterPassword( "");
 			clickLogin();
 			selectCity(i);
 			

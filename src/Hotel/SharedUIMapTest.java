@@ -80,8 +80,8 @@ public class SharedUIMapTest extends HotelAppBizFunctions{
 		driver.get("http://www.adactin.com/HotelApp/");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	
-		enterUsername("doggiecai");
-		enterPassword("sj191013");
+		enterUsername("");
+		enterPassword("");
 		clickLogin();
 		assertTitle();
 	

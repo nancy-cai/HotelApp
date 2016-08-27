@@ -48,8 +48,8 @@ public class Hotelloging {
 		//pass SelectHotel driver to Hotelloging driver
 		this.driver = driver;
 		driver.get("http://www.adactin.com/HotelApp/");
-		enterUsername(driver, "doggiecai");
-		enterPassword(driver, "sj191013");
+		enterUsername(driver, "");
+		enterPassword(driver, "");
 		clickLogin(driver);
 		assertTitle(driver);
 	}

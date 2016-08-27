@@ -52,8 +52,8 @@ public class HotelLogin {
 
 	@Test
 	public void login() throws Exception {
-		enterUsername(driver, "doggiecai");
-		enterPassword(driver, "sj191013");
+		enterUsername(driver, "");
+		enterPassword(driver, "");
 		clickLogin(driver);
 		assertTitle(driver);
 
